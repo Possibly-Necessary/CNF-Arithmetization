@@ -5,7 +5,7 @@
 """ 
 
     Arithmetization mappings of the operations (from logical to arithmetic):
-        And/~  ----->  (1-var)
+        Not/~  ----->  (1-var)
         Or     ----->    +
         And    ----->    *
 
