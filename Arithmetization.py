@@ -15,7 +15,7 @@
 from sympy import symbols, Or, And, Not, to_cnf
 
 # Function that takes the formula as an argument and arithmetizes the logical formula
-def arithmetiz(formula):
+def arithmetize(formula):
 
     # Convert logical formula to CNF
     cnf_formula = to_cnf(formula)
@@ -49,7 +49,7 @@ formula = And(Or(x1, x3, x2), Or(Not(x2), x4, x1))
 print("Logical Formula:\n ", formula)
 
 # Execute the function and get the result
-reducedFormula = arithmetiz(formula)
+reducedFormula = arithmetize(formula)
 print("Arithmetic Expression:\n ", reducedFormula)
 
 # Expanded/factored reduced formula
@@ -62,6 +62,6 @@ x3, x4, x5, x7, x9 = symbols('x3 x4 x5 x7 x9', binary = True)
 
 # Define the logical formula
 logicalFormula = And(Or(x3, Not(x5), x7), Or(x5, x9), Or(Not(x3), Not(x4)))
-arithmeticFormula = arithmetiz(logicalFormula)
+arithmeticFormula = arithmetize(logicalFormula)
 
 print("Arithmetic Expression of the Second Example:\n ", arithmeticFormula)
